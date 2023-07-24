@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To_do_app</title>
+    <link rel="stylesheet" href="./style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    
+<div id="main">
+    <div class="head1"><span style="color: white; font-weight: bold; font-size: 2.5em;">TASK</span><span style="color: white; font-size: 2.5em;">list</span></div>
+    <button onclick="addTask()" class="task1"><i class="fa-sharp fa-light fa-circle-plus fa-flip"></i>Add Item </button>
+
+    <div  id="cardcontainer" class="cardcontainer">
+
+
+    </div>
+
+
+    <!--popup box-->
+    <div id="popupbox" class="popupbox hide">
+        <h2 class="hd1">Add New Task</h2>
+        <input  type="text" id="newCardName">
+        <button onclick="cardAdd()"  class="add">Add</button>
+        <button onclick="hideTask()" class="close">Close</button>
+
+    </div>
+
+</div>
+   
+
+<!------ 2nd popup-
+<div id="popupbox1" class="popupbox1 hide1">
+    <h2 class="hd2">Add New Task</h2>
+    <input  type="text" id="newCapName1">
+    <button onclick="bucket()"  class="add1" id="add1"> Add </button>
+    <button onclick="cross()" class="close1" id="close1"> Close </button>
+
+</div>-->
+
+
+    <script src="./script.js"></script>
+</body>
+</html>

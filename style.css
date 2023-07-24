@@ -1,0 +1,355 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+}
+
+body{
+    background-color: black;
+}
+
+/*heading............*/
+
+.head1{
+    width: 50vw;
+    font-size: 2.5em;
+    position: absolute;
+    top: 2%;
+    left: 10%;
+}
+
+/* add task............*/
+ .task1{
+    height: 10vh;
+    width: 20vw;
+    font-size: 2.5em; 
+    background-color: black;
+    color: white;
+    position: relative;
+    top: 4vh;
+    left: 60vw;
+    border: none;
+ }
+
+
+
+/*popup box............*/
+.popupbox{
+    position: fixed;
+    top: 30%;
+    left: 40%;
+    height: 40vh;
+    width: 30vw;
+    background-color: white;
+    border: 2px solid grey;
+    border-radius: 10px;
+}
+
+.hide{
+    display: none;
+}
+
+.hd1{
+
+    font-size: 3em;
+    text-align: center;
+    height: 10vh;
+    border-bottom: 2px solid grey;
+    box-sizing: border-box;
+    padding: 3.5%;
+    color: rgb(98, 12, 55);
+    text-shadow: 5px 5px 5px grey;
+    
+
+}
+#newCardName{
+    width: 25vw;
+    height: 7vh;
+   margin-left: 7%;
+ margin-top: 10%;
+    border: 2px solid rgb(98, 12, 55);
+    font-size: 2em;
+    text-align: center;
+    box-sizing: border-box;
+    
+
+}
+.add{
+    width: 11vw;
+    height: 5vh;
+    background-color:rgb(98, 12, 55) ;
+    color: white;
+    position: absolute;
+    top: 70%;
+    left: 7%;
+    font-size: 1.2em;
+    
+}
+
+.add:hover{
+    box-shadow: 0 0 10px #2196f3,
+    0 0 10px #2196f3,
+    0 0 10px #2196f3;
+    transition: 0.2s;
+    background-image: linear-gradient(90deg,transparent, #2196f3);
+}
+
+.close{
+    width: 11vw;
+    height: 5vh;
+    background-color:rgb(98, 12, 55) ;
+    color: white;
+    position: absolute;
+    top: 70%;
+    left: 54%; 
+    font-size: 1.2em;
+}
+.close:hover{
+    box-shadow: 0 0 10px #2196f3,
+    0 0 10px #2196f3,
+    0 0 10px #2196f3;
+    transition: 0.2s;
+    background-image: linear-gradient(90deg,transparent, #2196f3);
+}
+
+
+
+/* popup box2.............*/
+
+.popupbox1{
+    position: fixed;
+    top: 30%;
+    left: 40%;
+    height: 40vh;
+    width: 30vw;
+    background-color: white;
+    border: 2px solid grey;
+    border-radius: 10px;
+}
+
+.add1{
+    width: 11vw;
+    height: 5vh;
+    background-color:rgb(98, 12, 55) ;
+    color: white;
+    position: absolute;
+    top: 70%;
+    left: 7%;
+    font-size: 1.2em;
+}
+
+.close1{
+   
+    width: 11vw;
+    height: 5vh;
+    background-color:rgb(98, 12, 55) ;
+    color: white;
+    position: absolute;
+    top: 70%;
+    left: 54%; 
+    font-size: 1.2em;
+}
+
+.hd2{
+    
+    font-size: 3em;
+    text-align: center;
+    height: 10vh;
+    border-bottom: 2px solid grey;
+    box-sizing: border-box;
+    padding: 3.5%;
+    color: rgb(98, 12, 55);
+    text-shadow: 5px 5px 5px grey;
+
+}
+#newCapName1{
+    width: 25vw;
+    height: 7vh;
+   margin-left: 7%;
+ margin-top: 10%;
+    border: 2px solid rgb(98, 12, 55);
+    font-size: 2em;
+    text-align: center;
+    box-sizing: border-box;
+    
+
+}
+/* card container...........*/
+
+.cardcontainer{
+    width: 90vw;
+    height: auto;
+    border: 2px solid grey;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: absolute;
+    left: 5%;
+    top: 15%;
+    
+}
+
+.card{
+    height: 40vh;
+    width: 20vw;
+    border: 2px solid red;
+    background-color: rgb(202, 196, 199);
+    position: relative;
+}
+.title{
+    font-size: 3em;
+    text-align: center;
+    
+}
+
+.Listitem{
+    height: 20vh;
+    width: 15vw;
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    border: 2px solid black;
+}
+/*.delbut{
+     
+}*/
+
+.main{
+    height: 100vh;
+    width: 100vw;
+    filter: blur(5%);
+}
+
+
+/* pop2*/
+.pop2{
+    position: fixed;
+    top: 30%;
+    left: 40%;
+    height: 40vh;
+    width: 30vw;
+    background-color: white;
+    border: 2px solid grey;
+    border-radius: 10px;   
+}
+
+.input{
+    width: 25vw;
+    height: 7vh;
+    position: absolute;
+    left: 7%;
+    top: 45%;
+    border: 2px solid rgb(98, 12, 55);
+    font-size: 2em;
+    text-align: center;
+    box-sizing: border-box;
+    color: black;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width:700px) {
+    
+.head1{
+    width: 50vw;
+    font-size: 1em;
+    position: absolute;
+    top: 4%;
+    left: 10%;
+}
+.task1{
+    height: 10vh;
+    width: 20vw;
+    font-size: 1.5em; 
+    background-color: black;
+    color: white;
+    position: relative;
+    top: 2vh;
+    left: 60vw;
+    border: none;
+ }
+ 
+.cardcontainer{
+    width: 90vw;
+    height: auto;
+    border: 2px solid grey;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    left: 5%;
+    top: 15%;
+    
+}
+
+.card{
+    height: 40vh;
+    width: 90vw;
+    border: 2px solid red;
+    background-color: rgb(202, 196, 199);
+    position: relative;
+}
+
+.popupbox{
+    position: fixed;
+    top: 30%;
+    left: 20%;
+    height: 40vh;
+    width: 70vw;
+    background-color: white;
+    border: 2px solid grey;
+    border-radius: 10px;
+}
+
+.hd1{
+
+    font-size: 2em;
+    box-sizing: border-box;
+    padding: 3.5%;
+    
+    
+
+}
+#newCardName{
+    width: 60vw;
+    height: 7vh;
+   margin-left: 7%;
+ margin-top: 10%;
+    border: 2px solid rgb(98, 12, 55);
+    font-size: 2em;
+    text-align: center;
+    box-sizing: border-box;
+    
+
+}
+.add{
+    width: 27vw;
+    height: 5vh;
+  
+    
+}
+.close{
+    width: 27vw;
+    height: 5vh;
+}
+
+
+
+
+
+    
+}
