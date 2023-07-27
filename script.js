@@ -2,7 +2,7 @@ const add1=document.getElementById("popupbox")
 const cardCon=document.getElementById("cardcontainer")
 const newCardName=document.getElementById("newCardName")
 const popupbox2=document.getElementById("popupbox1")
-const main=document.getElementById("main")
+const head1=document.getElementById("head1")
 
 
 //p2
@@ -14,7 +14,9 @@ const main=document.getElementById("main")
 
 function addTask(){
  add1.classList.remove("hide")
- main.style.filter="blur"
+ head1.style.display="none"
+ var toggle =document.getElementById("main")
+ toggle.classList.addTask("blur")
 
 }
 
@@ -28,6 +30,26 @@ function hideTask(){
 //function for adding card
 
 function cardAdd(){
+  /* // to start
+   const start = () =>{
+      setTimeout(function(){
+         confetti.start();
+      }, 1000);
+   } 
+   //to end
+   const stop = () =>{
+      setTimeout(function(){
+         confetti.stop();
+      },5000);
+   } 
+
+   start();
+   stop();
+
+
+*/
+
+
     //for main div
     var newCard =document.createElement("div")
     
@@ -39,6 +61,14 @@ function cardAdd(){
      //for list 
      var listItem =document.createElement("div")
      listItem.classList.add("Listitem")
+
+     //items
+     var item_num =document.createElement("div")
+     item_num.classList.add("item_num")
+     newCard.appendChild(item_num)
+     
+
+
 
      //for deletebutton
      var delBut =document.createElement("button")
@@ -54,13 +84,16 @@ function cardAdd(){
      newCard.appendChild(delBut)
      newCard.appendChild(addItem)
 
+
+
+
      cardCon.appendChild(newCard)
 
      newCard.classList.add("card")
 
      title.innerHTML=newCardName.value
      delBut.innerHTML="Delete"
-     addItem.innerText="+"
+     addItem.innerText="Add"
      
      delBut.addEventListener("click",function (){
         newCard.remove()
@@ -68,7 +101,7 @@ function cardAdd(){
      //popup create
 
     //P_BOX
-     newCard.addEventListener("click",function(){
+    addItem.addEventListener("click",function(){
       var pop2=document.createElement("div")
       pop2.classList.add("pop2")
         newCard.appendChild(pop2)
@@ -95,6 +128,15 @@ function cardAdd(){
 
    add_1.addEventListener("click",function(){
       listItem.innerHTML=input.value
+       const done =document.createElement("button")
+       done.classList.add("done")
+       done.innerHTML="done"
+       listItem.appendChild(done)
+
+       done.addEventListener("click",function(){
+         listItem.style.textDecoration="linethrough"
+       })
+
    })
 
    //back
