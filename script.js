@@ -1,79 +1,66 @@
-let item = document.getElementById("add_item");
-let Text_line = document.getElementById("Text_line");
+let icons = document.getElementById("icon");
+let todoText = document.getElementById("text_line");
 
-item.addEventListener("click", () => {
-    addItems("Add items");
-  });
+// Event Listener for add Items
+icons.addEventListener("click", () => {
+  addItems("Add your items");
+});
+
+function addItems(heading, parentNode = "") {
+  console.log(heading);
+
   
-  function addItems(heading, parentNode = "") {
-    console.log(heading);
-
-    //   creating pop_up
   let pop = document.createElement("div");
-  pop.className = "popup-box";
-
-//heading
-  let pop_upHead = document.createElement("div");
-  pop_upHead.id = "popupHeading";
-  pop_upHead.textContent = heading;
-
-//input
+  pop.className = "popup";
+  let popHead = document.createElement("div");
+  popHead.id = "popupHead";
+  popHead.textContent = heading;
   let popInput = document.createElement("input");
-  popInput.id = "p_Input";
+  popInput.id = "popupInput";
   popInput.type = "text";
- 
-  let buttons = document.createElement("div");
-  buttons.className = "button";
-//add
-  let pop_Add = document.createElement("button");
-  pop_Add.id = "Add_p";
-  pop_Add.textContent = "Add";
+  //popInput.placeholder = heading;
 
-  //close
+  let buttons = document.createElement("div");
+  buttons.className = "buttons";
+
+  let popAdd = document.createElement("button");
+  popAdd.id = "popupAdd";
+  popAdd.textContent = "Add";
+
   let popClose = document.createElement("button");
-  popClose.id = "Close_p";
+  popClose.id = "popupClose";
   popClose.textContent = "Close";
 
-  // add items to pop up
+  
   document.body.appendChild(pop);
-  pop.appendChild(pop_upHead);
+  pop.appendChild(popHead);
   pop.appendChild(popInput);
   pop.appendChild(buttons);
-  buttons.appendChild(pop_Add);
+  buttons.appendChild(popAdd);
   buttons.appendChild(popClose);
 
-
-if (heading === "Add new subitems") {
-    pop_Add.addEventListener("click", () => {
+  if (heading === "Add new subitems") {
+    popAdd.addEventListener("click", () => {
       creatingSubTask(popInput.value, parentNode);
-      close_Popup();
+      closingPop();
     });
   } else if (heading === "Add your items") {
-    pop_Add.addEventListener("click", () => {
+    popAdd.addEventListener("click", () => {
       createNewTask(popInput.value);
-     
-      Text_line.style.display = "none";
-      close_Popup();
+      
+      todoText.style.display = "none";
+      closingPop();
       pg1();
     });
   }
 
-  //close pop up
+  
   popClose.addEventListener("click", () => {
-    close_Popup();
+    closingPop();
   });
 
-// for making bacground blur
-
-for (let i = 0; i < document.body.children.length; i++) {
-  document.body.children[i].style.filter = "blur(5px)";
-}
-pop.style.filter = "blur(0)";
-
-
-
-//close
-  function close_Popup() {
+  
+  function closingPop() {
     pop.remove();
     popInput.value = "";
 
@@ -82,4 +69,131 @@ pop.style.filter = "blur(0)";
     }
   }
 
+
+  for (let i = 0; i < document.body.children.length; i++) {
+    document.body.children[i].style.filter = "blur(5px)";
+  }
+  pop.style.filter = "blur(0)";
+}
+
+let section = document.querySelector("section");
+
+function createNewTask(cardHeading) {
+ 
+  let todoCard = document.createElement("div");
+  todoCard.className = "todoCard";
+ 
+
+  let cardHead = document.createElement("div");
+  cardHead.className = "cardHead";
+  cardHead.textContent = cardHeading;
+
+  let subTaskButtons = document.createElement("div");
+  subTaskButtons.className = "subTaskButtons";
+
+  let trash = document.createElement("span");
+  
+  trash.textContent = "-";
+  trash.className = "remove";
+  
+  trash.id = "trash";
+  let createSubTask = document.createElement("button");
+  createSubTask.className = "createSubTask";
+  createSubTask.textContent = "+";
+
+  
+  section.appendChild(todoCard);
+  todoCard.appendChild(cardHead);
+  todoCard.appendChild(subTaskButtons);
+  subTaskButtons.appendChild(trash);
+  subTaskButtons.appendChild(createSubTask);
+
+ 
+
+  createSubTask.addEventListener("click", () => {
+    addItems("Add new subitems", todoCard);
+  });
+  
+  trash.addEventListener("click", () => {
+    todoCard.remove();
+    
+    if (section.children.length === 0) {
+      todoText.style.display = "block";
+    }
+  });
+
+ 
+
+  cardHead.addEventListener("click", () => {
+    pg2(todoCard);
+  });
+}
+
+
+
+function creatingSubTask(subTaskDesc, parentNode) {
+ 
+  let subTaskRow = document.createElement("div");
+  subTaskRow.className = "subTaskRow";
+
+  let subTask = document.createElement("span");
+  subTask.className = "subTask";
+  subTask.textContent = subTaskDesc;
+
+  let markDone = document.createElement("button");
+  markDone.className = "markDone";
+  markDone.textContent = "Mark Done";
+
+  
+  parentNode.appendChild(subTaskRow);
+  subTaskRow.appendChild(subTask);
+  subTaskRow.appendChild(markDone);
+
+  
+
+  markDone.addEventListener("click", () => {
+    subTask.classList.add("checkedSubTask");
+    markDone.remove();
+  });
+}
+
+
+
+let back = document.getElementsByClassName("box")[0];
+let headtoAdd = document.getElementById("adding_1");
+
+back.addEventListener("click", () => {
+  pg1();
+});
+
+
+
+headtoAdd.addEventListener("click", () => {
+  addItems("Add your items");
+});
+
+let head1 = document.getElementsByTagName("header")[0];
+let head2 = document.getElementsByTagName("header")[1];
+let pg2Head = document.getElementById("heading2");
+
+function pg2(parentNode) {
+  head1.style.display = "none";
+  head2.style.display = "flex";
+  parentNode.classList.add("centerCard");
+  section.style.visibility = "hidden";
+  pg2Head.textContent = parentNode.children[0].textContent;
+}
+
+function pg1() {
+  head1.style.display = "flex";
+  head2.style.display = "none";
+  section.style.visibility = "visible";
+  removeClass();
+}
+
+
+function removeClass() {
+  for (let i = 0; i < section.children.length; i++) {
+    section.children[i].classList.remove("centerCard");
+  }
 }
