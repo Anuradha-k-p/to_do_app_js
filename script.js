@@ -1,8 +1,8 @@
-let icons = document.getElementById("icon");
-let todoText = document.getElementById("text_line");
+let i_start = document.getElementById("icon");
+let Text_line = document.getElementById("text_line");
 
-// Event Listener for add Items
-icons.addEventListener("click", () => {
+
+i_start.addEventListener("click", () => {
   addItems("Add your items");
 });
 
@@ -18,8 +18,7 @@ function addItems(heading, parentNode = "") {
   let popInput = document.createElement("input");
   popInput.id = "popupInput";
   popInput.type = "text";
-  //popInput.placeholder = heading;
-
+  
   let buttons = document.createElement("div");
   buttons.className = "buttons";
 
@@ -48,7 +47,7 @@ function addItems(heading, parentNode = "") {
     popAdd.addEventListener("click", () => {
       createNewTask(popInput.value);
       
-      todoText.style.display = "none";
+      Text_line.style.display = "none";
       closingPop();
       pg1();
     });
