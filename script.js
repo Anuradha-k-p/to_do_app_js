@@ -12,9 +12,13 @@ function addItems(heading, parentNode = "") {
   
   let pop = document.createElement("div");
   pop.className = "popup";
+
+
   let popHead = document.createElement("div");
   popHead.id = "popupHead";
   popHead.textContent = heading;
+
+  
   let popInput = document.createElement("input");
   popInput.id = "popupInput";
   popInput.type = "text";
