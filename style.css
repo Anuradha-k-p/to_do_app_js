@@ -30,22 +30,14 @@ body {
     height: 50px;
   }
   
-  #Icon_B {
-    width: 40px;
-    height: 40px;
-    background: rgb(0, 0, 0);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
-  }
   #back {
     display: inline-block;
     font-size: 40px;
     width: 80px;
     height: 50px;
     margin-bottom: 5px;
+    color:rgb(67, 4, 32); 
+    font-weight: bold;
   }
   
   section {
@@ -73,6 +65,8 @@ body {
     font-size: 25px;
     color: rgb(171, 13, 84);
     font-size: 2em;
+    position: absolute;
+    left: 10%;
   }
   .remove{
     font-size: 35px;
@@ -295,10 +289,16 @@ top: 75%;
     transform: translate(-50%, -50%);
   }
   
-  /* Applying Media Queries */
+ 
+
+
+
+
+
   @media (max-width: 580px) {
     section {
       justify-content: center;
+      margin-top: 50%;
     }
   
     header {
@@ -307,18 +307,6 @@ top: 75%;
       right: 28px;
     }
   
-    #Icon_B {
-      width: 30px;
-      height: 30px;
-      background: rgb(0, 0, 0);
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 2px solid white;
-      cursor: pointer;
-    }
     
     #back {
       display: inline-block;
@@ -328,4 +316,68 @@ top: 75%;
       margin-bottom: 5px;
       padding-top: 20px;
     }
+
+    
+  #popupAdd{
+    position: absolute;
+    left: 15%;
+    top: 75%;
+      }
+    
+      #popupClose{
+        position: absolute;
+    left: 60%;
+    top: 75%;
+      }
+      
+  #popupInput {
+    margin-bottom: 20px;
+    width: 40vw;
+    height: 5vh;
+    text-align: center;
+   
+  }
+  
+  .popup {
+    
+    width: 45vw;
+    height: 25vh;
+    
+  }
+
+  
+  .todoCard {
+    min-height: 300px;
+    width: 50%;
+    min-width: 350px;
+    background-color: rgb(143, 217, 226);
+    border: 2px solid rgb(9, 7, 105);
+    border-radius: 5px;
+    position: relative;
+    margin: 0px 10px 20px 10px;
+    padding-bottom: 40px;
+  }
+
+  #span1 {
+    font-size: 1.5em;
+  }
+  
+  #span2 {
+    font-size: 1.5em;
+  }
+
+
+  }
+
+  @media (max-width: 300px) {
+
+    .todoCard {
+      
+      min-width: 250px;
+     
+    }
+
+   
+
+
   }
