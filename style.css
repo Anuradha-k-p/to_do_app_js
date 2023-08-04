@@ -291,6 +291,37 @@ top: 75%;
   
  
 
+ @media (max-width: 850px){
+
+  
+  .todoCard {
+    min-height: 300px;
+    width: 30%;
+    min-width: 320px;
+    background-color: rgb(143, 217, 226);
+    border: 2px solid rgb(9, 7, 105);
+    border-radius: 5px;
+    position: relative;
+    margin: 0px 5px 20px 5px;
+    padding-bottom: 40px;
+  }
+
+  
+  section {
+    position: relative;
+    margin: 80px 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-height: 40vh;
+    width: 90%;
+    margin-top: 20%;
+  }
+
+  
+
+
+ }
 
 
 
