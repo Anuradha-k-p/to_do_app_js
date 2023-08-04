@@ -291,7 +291,7 @@ top: 75%;
   
  
 
- @media (max-width: 850px){
+ @media (max-width: 950px){
 
   
   .todoCard {
@@ -318,7 +318,35 @@ top: 75%;
     margin-top: 20%;
   }
 
+  #popupInput {
+    font-size: 35px;
+    width: 50vw;
+  }
+
+  #popupAdd{
+    font-size: 25px;
+    position: absolute;
+    left: 10%;
+    top: 75%;
+    width: 20vw;
+      }
+  #popupClose{
+    font-size: 25px;
+    position: absolute;
+    left: 60%;
+    top: 75%;
+    width: 20vw;
+      }
+      
+  .popup {
+    width: 60vw;
+    height: 25vh;
+   
+  }
   
+  #popupHead {
+    font-size: 30px;
+  }
 
 
  }
@@ -360,22 +388,13 @@ top: 75%;
     left: 60%;
     top: 75%;
       }
-      
-  #popupInput {
-    margin-bottom: 20px;
-    width: 40vw;
-    height: 5vh;
-    text-align: center;
+        
+  .popup {
+    width: 45vw;
+    height: 25vh;
    
   }
   
-  .popup {
-    
-    width: 45vw;
-    height: 25vh;
-    
-  }
-
   
   .todoCard {
     min-height: 300px;
@@ -396,6 +415,41 @@ top: 75%;
   #span2 {
     font-size: 1.5em;
   }
+
+  
+  #popupInput {
+    font-size: 25px;
+    width: 70vw;
+  }
+
+  #popupAdd{
+    font-size: 25px;
+    position: absolute;
+    left: 12%;
+    top: 75%;
+    width: 25vw;
+      }
+  #popupClose{
+    font-size: 25px;
+    position: absolute;
+    left: 57%;
+    top: 75%;
+    width: 25vw;
+      }
+      
+  .popup {
+    width: 75vw;
+    height: 25vh;
+   
+  }
+  
+  #popupHead {
+    font-size: 25px;
+  }
+
+
+
+
 
 
   }
